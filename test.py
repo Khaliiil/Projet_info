@@ -1,2 +1,1 @@
-print ("Ce code est vide")
-print("plus maintenant")
+print ("Bravo, vous avez réussi l'installation de Git !")
