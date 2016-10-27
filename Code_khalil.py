@@ -16,7 +16,7 @@ def Euler(F, t0, tf, y0, n) :
     plt.plot(temps, fonction)
     return fonction
     
-def F(t, y):
+def F(t, y):#Codage de l'équation différentielle y'(t) = -3y(t)
     y = -3*y
     return y
     
