@@ -7,23 +7,21 @@ def Euler(F, t0, tf, y0, n) :
     y = y0
     h = (tf-t0)/float(n)
     temps = [t0]
-    fonction = [y0]
+    solution = [y0]
     for i in range(n) :
         y = y + h*F(t, y)
         t = t+h
         temps.append(t)
-        fonction.append(y)
-    plt.plot(temps, fonction)
-    return fonction
+        solution.append(y)
+    plt.plot(temps, solution)
+    return solution
     
-def F(t, y):#Codage de l'équation différentielle y'(t) = -3y(t)
+def F(t, y):# Codage de l'équation différentielle y'(t) = -3y(t)
     y = -3*y
     return y
     
     
 Euler(F, 0, 5, 1, 1000)
 
-#x = np.linspace(0, 5, 5)
-#y = np.exp(x)
-#plt.plot(x, y)
+
  
