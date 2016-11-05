@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import numpy as np
-#import matplotlib as plt
+import matplotlib as plt
 
 
 class ODE_1():
@@ -32,9 +32,8 @@ class ODE_1():
             temps.append(t)
             fonction1.append(x)
             fonction2.append(y)
-        #plt.plot(temps, fonction1)
-        #plt.plot(temps, fonction2) 
-        return fonction1
+        plt.plot(temps, fonction1)
+        plt.plot(temps, fonction2)
     
     def Runge_Kutta(t, N):
         pass
@@ -59,7 +58,7 @@ def P_P(x, alpha, beta, gamma, delta):
    
     
 A = ODE_1(P_P, [5, 3])
-A.Euler(5, 1000)
+A.Euler(10, 100000)
 
 #x = np.linspace(0, 5, 5)
 #y = np.exp(x)
