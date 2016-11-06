@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 
 class ODE_1():
@@ -34,6 +34,7 @@ class ODE_1():
             fonction2.append(y)
         plt.plot(temps, fonction1)
         plt.plot(temps, fonction2)
+        plt.show()
     
     def Runge_Kutta(t, N):
         pass
