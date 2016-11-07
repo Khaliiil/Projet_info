@@ -26,6 +26,7 @@ class ODE_1():
             temps.append(t)
             fonction1.append(x)
             fonction2.append(y)
+        print temps
         plt.plot(temps, fonction1)
         plt.plot(temps, fonction2)
         plt.show()
