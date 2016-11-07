@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -10,23 +9,18 @@ class ODE_1():
         self.y_0 = CI
 
     def Euler(self, t, N) :
-        
-        alpha = int(raw_input("Entrez alpha : "))
-        beta = int(raw_input("Entrez beta : "))
-        gamma = int(raw_input("Entrez gamma : "))
-        delta = int(raw_input("Entrez delta : "))
         t0 = 0
         h = (t-t0)/float(N)
         t = t0
-        y = self.y_0[1]
         x = self.y_0[0]
+        y = self.y_0[1]
         z = [x, y]
         temps = [t0]
         fonction1 = [x]
         fonction2 = [y]
         for i in range(N) :
-            x = x + h*self.f(z, alpha, beta, gamma, delta)[0]
-            y = y + h*self.f(z, alpha, beta, gamma, delta)[1]
+            x = x + h*self.f(z)[0]
+            y = y + h*self.f(z)[1]
             z = [x, y]
             t = t+h
             temps.append(t)
@@ -56,10 +50,18 @@ def P_P(x, alpha, beta, gamma, delta):
     liste.append(partie2)
     return liste
  
-   
+if __name__ == '__main__':
+    alpha = int(raw_input("Entrez alpha : "))
+    beta = int(raw_input("Entrez beta : "))
+    gamma = int(raw_input("Entrez gamma : "))
+    delta = int(raw_input("Entrez delta : "))
+
+    def f(x):
+        global alpha, beta, gamma, delta
+        return P_P(x, alpha, beta, gamma, delta)
     
-A = ODE_1(P_P, [5, 3])
-A.Euler(10, 100000)
+    A = ODE_1(f, [5, 3])
+    A.Euler(10, 10000)
 
 #x = np.linspace(0, 5, 5)
 #y = np.exp(x)
