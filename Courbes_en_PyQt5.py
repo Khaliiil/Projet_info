@@ -28,10 +28,10 @@ def dessiner_grille(qp):
     bleu = QColor(0, 0, 200)
     
     for i in range(len(temps)-1):
-        point1 = QPoint(temps[i]*50, 200-fonction1[i]*50)
-        point2 = QPoint(temps[i+1]*50, 200-fonction1[i+1]*50)
-        point3 = QPoint(temps[i]*50, 200-fonction2[i]*50)
-        point4 = QPoint(temps[i+1]*50, 200-fonction2[i+1]*50)
+        point1 = QPoint(temps[i]*50, 200-fonction1[i]*10)
+        point2 = QPoint(temps[i+1]*50, 200-fonction1[i+1]*10)
+        point3 = QPoint(temps[i]*50, 200-fonction2[i]*10)
+        point4 = QPoint(temps[i+1]*50, 200-fonction2[i+1]*10)
         ligne = QLine(point1, point2)
         ligne2 = QLine(point3, point4)
         qp.setPen(bleu)
