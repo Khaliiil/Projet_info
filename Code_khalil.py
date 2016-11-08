@@ -26,8 +26,9 @@ class ODE_1():
             temps.append(t)
             fonction1.append(x)
             fonction2.append(y)
-        plt.plot(temps, fonction1)
-        plt.plot(temps, fonction2)
+        #plt.plot(temps, fonction1)
+        #plt.plot(temps, fonction2)
+        plt.plot(fonction1, fonction2)
         plt.show()
     
     def Runge_Kutta(t, N):
