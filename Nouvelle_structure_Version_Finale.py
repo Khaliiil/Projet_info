@@ -217,7 +217,7 @@ class ProiePredateur(EvolutionSystem):
 if __name__ == '__main__':
 
     A = ProiePredateur(2, 1 ,1 ,1, 1, 1)
-    A.show(A.systeme, [1, 10, 5])
+    A.show(A.systeme, [1, 6, 5])
 
 
 
