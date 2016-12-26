@@ -189,7 +189,7 @@ class FenetreDessin(QWidget):
 ################################################################################
 
 class ProiePredateur(EvolutionSystem):
-    def __init__(self, alpha, beta, gamma, delta):
+    def __init__(self, alpha, beta, gamma, delta, zeta, mu):
         self.alpha = alpha
         self.beta = beta
         self.gamma = gamma
