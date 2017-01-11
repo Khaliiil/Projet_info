@@ -166,6 +166,8 @@ class FenetreDessin(QWidget):
         
         for i in range(len(self.temps)-1):#Courbes especes
             for y in range(len(self.effectifs)):
+                if self.effectifs[y][i]*COEFF_ORDONNEE > 2000:
+                    break
                 point1 = QPoint(GAUCHE + self.temps[i]*COEFF_ABSCISSE, BAS-self.effectifs[y][i]*COEFF_ORDONNEE)
                 point2 = QPoint(GAUCHE + self.temps[i+1]*COEFF_ABSCISSE, BAS-self.effectifs[y][i+1]*COEFF_ORDONNEE)
                 ligne = QLine(point1, point2)
